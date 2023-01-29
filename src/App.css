@@ -1,0 +1,113 @@
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* OpenSan */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
+/* Roboto Mono */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
+
+
+:root{
+    --light: #FAF9F7;
+    --dark: #252627;
+    --blue: #0052CC;
+    --dark_blue: #0e44bd;
+    --purple: #c801eb;
+    --orange: #eb3801;
+    --green: #1ecb00;
+    --font__xsmall: 1.4rem;
+    --font__small: 1.5rem;
+    --font__normal: 1.6rem;
+    --font__medium: 1.7rem;
+    --font__large: 2rem;
+    --font__xlarge: 2.5rem;
+    --font__xxlarge: 3rem;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    /* TODO: Fix the overflow x occuring due to gradient blob */
+    /* overflow-x: hidden; */
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--light);
+    color: var(--dark);
+    font-size: var(--font__normal);
+    line-height: 1.5;
+}
+
+p{
+    line-height: 25px;
+}
+
+a{
+  text-decoration: none;
+  color: var(--dark);
+}
+
+h1{
+  font-weight: 600;
+}
+
+li{
+  list-style: none;
+}
+
+.heading{
+  font-size: var(--font__xxlarge);
+  text-decoration: underline;
+}
+
+@media only screen
+and (min-width : 851px)
+and (max-width : 1024px) {
+
+    body{
+        font-size: var(--font__small);
+    }
+}
+
+@media only screen
+and (min-width: 651px)
+and (max-width:850px){
+  body{
+    font-size: var(--font__small);
+  }
+
+  .heading{
+    font-size: var(--font__large);
+  }
+}
+
+@media only screen 
+and (max-width: 650px){
+  body{
+    font-size: var(--font__small) !important;
+  }
+
+  .heading{
+    font-size: var(--font__large);
+  }
+}
+
+@media only screen
+and (max-width:315px){
+  body{
+    font-size: var(--font__xsmall);
+  }
+}
+
+

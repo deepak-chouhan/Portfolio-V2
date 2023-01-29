@@ -1,0 +1,140 @@
+:root{
+    --accentFirst: #005aff;
+    --accentSecond: #0e44bd;
+    --accentThird: #07a217;
+}
+
+.project{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 35px;
+    align-items: center;
+}
+
+.cover::after{
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 300px;
+    filter: blur(60px);
+}
+
+.project:nth-of-type(1) .cover::after{
+    background: var(--accentFirst);
+}
+.project:nth-of-type(2) .cover::after{
+    background: var(--accentSecond);
+}
+.project:nth-of-type(3) .cover::after{
+    background: var(--accentThird);
+}
+
+.project .cover img{
+    object-fit: cover;
+    width: 100%;
+    height: 450px;
+}
+
+.project__overline, .project__overline__mob{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.project__overline__mob{
+    display: none;
+}
+
+.project__details{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project__title{
+    font-size: var(--font__xlarge);
+}
+
+.project__desc{
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    gap: 15px;
+}
+
+.project__desc::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 150%;
+    right: -70px;
+    height: 100%;
+    padding: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(to right, hsl(40deg 7% 92% / 30%), hsl(40deg 7% 92% / 80%));
+    border-radius: 10px;
+}
+
+.project__desc p{
+    font-weight: 400;
+}
+
+.project__tech li{
+    font-size: var(--font__small);
+}
+
+.project:nth-of-type(1) .project__tech li{
+    color: var(--accentFirst);
+}
+.project:nth-of-type(2) .project__tech li{
+    color: var(--accentSecond);
+}
+.project:nth-of-type(3) .project__tech li{
+    color: var(--accentThird);
+}
+
+.project__link{
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.project__link a svg{
+    height: 27px;
+    width: auto;
+}
+
+/* For Middle Element */
+
+.project:nth-of-type(2){
+    direction: rtl;
+}
+
+.project:nth-of-type(2) p{
+    width: fit-content;
+    direction: ltr;
+    text-align: right;
+}
+
+.project:nth-of-type(2) .project__desc::after{
+    left: -70px;
+    right: unset;
+    background: linear-gradient(to left, hsl(40deg 7% 92% / 30%), hsl(40deg 7% 92% / 80%));
+}
+
+.project:nth-of-type(2) .project__tech{
+    direction: ltr;
+    width: fit-content;
+}
+
+.project:nth-of-type(2) .project__link{
+    width: fit-content;
+    direction: ltr;
+}

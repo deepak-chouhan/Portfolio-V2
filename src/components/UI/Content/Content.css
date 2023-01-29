@@ -1,0 +1,26 @@
+.content{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+}
+
+@media only screen 
+and (min-width: 651px)
+and (max-width: 850px){
+    
+    .content{
+        width: 100%;
+    }
+}
+
+@media only screen 
+and (max-width: 650px){
+
+    .content{
+        width: 100%;
+        gap: 100px;
+    }
+
+}

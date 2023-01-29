@@ -1,0 +1,56 @@
+.email__desk{
+    display: block;
+}
+
+.icon__email{
+    background-color: var(--dark);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    padding: 18px 15px;
+}
+
+.icon__email::after{
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 1px;
+    background-color: var(--dark);
+    height: 150vh;
+}
+
+.icon__email svg{
+    width: 33px;
+    height: auto;
+}
+
+.email__mob{
+    display: none;
+    position: relative;
+    top: 30px;
+    left: 0px;
+}
+
+.email__mob::before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 1px;
+    width: 30px;
+    margin-right: 15px;
+    background: var(--dark);
+}
+
+
+@media only screen
+and (max-width: 850px){
+    .email__desk{
+        display: none;
+    }
+
+    .email__mob{
+        display: block;
+    }
+}

@@ -1,0 +1,30 @@
+
+.text_bg{
+    position: absolute;
+    z-index: -3;
+    bottom: 0;
+    right: 0;
+    mix-blend-mode: color-dodge;
+}
+
+.text_bg h1{
+    font-size: 27rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: #050505;
+}
+
+@media only screen 
+and (max-width: 650px){
+    .text_bg{
+        bottom: -50px;
+        right: -20px;
+        writing-mode: vertical-lr;
+        mix-blend-mode: color-dodge;
+    }
+
+    .text_bg h1{
+        font-size: 13rem;
+    }
+}
+

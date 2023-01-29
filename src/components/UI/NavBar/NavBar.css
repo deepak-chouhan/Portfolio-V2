@@ -1,0 +1,45 @@
+.desk_nav{
+    display: block;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.desk_nav nav ul{
+    display: flex;
+    gap: 50px;
+    margin: auto;
+}
+
+@media only screen
+and (max-width:850px) {
+    .desk_nav{
+        position: fixed;
+        z-index: 2;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #0052CC;
+        padding: 15px;
+        align-items: center;
+        justify-content: space-evenly;
+    
+        background: rgba(250, 249, 247, 0.2);
+        box-shadow: 0px -0.5px 0px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(30px);
+    }
+    
+    .desk_nav nav ul{
+        display: flex;
+        gap: 50px;
+        margin: auto;
+    }
+}
+
+@media only screen
+and (max-width: 315px){
+    .desk_nav nav ul{
+        gap: clamp(20px, 30px, 50px);
+    }
+}

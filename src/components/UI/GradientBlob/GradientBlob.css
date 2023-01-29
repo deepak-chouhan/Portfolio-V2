@@ -1,0 +1,52 @@
+@keyframes blob_animation {
+    from{
+        border-radius: 66% 34% 69% 31% / 71% 29% 71% 29%;
+        transform: translate(0, 0) rotate(0);
+    } to {
+        border-radius: 29% 71% 24% 76% / 62% 67% 33% 38%;
+        transform: translate(-30%, 10%) rotate(20deg);
+    }
+}
+
+#gradient_blob {
+    will-change: contents;
+    min-height: 900px;
+    min-width: 1000px;
+    position: absolute;
+    z-index: -4;
+    top: -300px;
+    /* right: -300px; */
+    right: 0;
+    border-radius: 66% 34% 69% 31% / 71% 29% 71% 29%;
+    filter: blur(90px);
+    /* For browsers that do not support gradients */
+    /* background-image: conic-gradient(from 265deg at 50% 50%, #E8ECF5 45deg, #FF4EC4 226deg, #5b2fcc 323deg); */
+    background-repeat: no-repeat;
+    animation: blob_animation 10s infinite alternate ease-in-out;
+}
+
+@media only screen 
+and (min-width: 651px)
+and (max-width: 850px){
+
+    #gradient_blob{
+        min-height: 90vh;
+        min-width: 100%;
+        top: -96px;
+        left: -50px;
+        background-image: conic-gradient(from 282deg at 56% 49%, #fd3bbc 182deg, #E8ECF5 173deg, #451ab2 304deg);
+        background-repeat: no-repeat;
+    }
+}
+
+@media only screen 
+and (max-width: 650px){
+    #gradient_blob{
+        min-height: 90vh;
+        min-width: 100%;
+        top: -96px;
+        right: 0px;
+        background-image: conic-gradient(from 282deg at 56% 49%, #fd3bbc 182deg, #E8ECF5 173deg, #451ab2 304deg);
+        background-repeat: no-repeat;
+    }
+}

@@ -1,0 +1,19 @@
+.btn__underline{
+    position: relative;
+}
+
+.btn__underline::after{
+    content: "";
+    display: block;
+    position: absolute;
+    background: var(--dark);
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 0.5px;
+    transition:  all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+.btn__underline:hover::after{
+    width: 100%;
+}

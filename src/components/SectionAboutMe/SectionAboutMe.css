@@ -1,0 +1,146 @@
+.about_me{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about_me .details{
+    display: flex;
+    align-items: center;
+    gap: 250px;
+}
+
+.about_me .details img{
+    width: 400px;
+}
+
+.about_me .details .summary{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.about_me .details .summary .about{
+    font-weight: 400;
+}
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skills ul, .project__tech{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills ul li, .project__tech li{
+    font-family: 'Roboto Mono', monospace;
+    display: inline-block;
+    color: var(--blue);
+}
+
+.skills ul li::after, .project__tech li::after{
+    content: "\2022";
+    font-size: var(--font__small);
+    position: relative;
+    right: -10px;
+}
+
+.skills ul li:last-of-type::after, .project__tech li:last-of-type::after{
+    content: "";
+}
+
+@media only screen
+and (min-width: 1024px) 
+and (max-width: 1200px) {
+    .about_me .details {
+        gap: 80px;
+    }
+}
+
+@media only screen
+and (min-width : 851px)
+and (max-width : 1024px) {
+
+    .about_me .details{
+        flex-direction: row;
+        align-items: unset;
+        gap: 50px;
+    }
+
+    .about_me .details .summary{
+        gap: 20px;
+    }
+
+    .about_me .details img{
+        width: 300px;
+    }
+
+    .skills ul, .project__tech{
+        gap: 10px;
+    }
+
+    .skills ul li::after, .project__tech li::after{
+        right: -5px;
+    }
+}
+
+@media only screen 
+and (min-width: 651px)
+and (max-width: 850px){
+
+    .about_me{
+        padding: 0 20px;
+    }
+
+    .about_me .details{
+        flex-direction: row;
+        align-items: unset;
+        gap: 50px;
+    }
+
+    .about_me .details .summary{
+        gap: 20px;
+    }
+
+    .about_me .details img{
+        width: 300px;
+    }
+
+    .skills ul, .project__tech{
+        gap: 10px;
+    }
+
+    .skills ul li::after, .project__tech li::after{
+        right: -5px;
+    }
+
+}
+
+@media only screen 
+and (max-width: 650px){
+
+    .about_me{
+        padding: 0 20px;
+    }
+
+    .about_me .details{
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .about_me .details img{
+        width: 100%;
+    }
+
+    .skills ul, .project__tech{
+        gap: 10px;
+    }
+
+    .skills ul li::after, .project__tech li::after{
+        right: -5px;
+    }
+}

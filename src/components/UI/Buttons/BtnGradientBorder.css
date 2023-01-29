@@ -1,0 +1,10 @@
+.btn__border__gradient{
+    border: 2px solid;
+    border-image: linear-gradient(to left, #00EEFF, #263bd9) 1;
+    transition:  all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+.btn__border__gradient:hover{
+    border-image: linear-gradient(to right, #00EEFF, #263bd9) 1;
+    color: #263bd9;
+}

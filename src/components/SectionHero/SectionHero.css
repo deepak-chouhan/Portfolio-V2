@@ -1,0 +1,118 @@
+.hero{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.intro__name{
+    font-size: 15rem;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.intro__summary{
+    width: 70%;
+    font-weight: 400;
+    font-size: var(--font__medium);
+}
+
+
+@media only screen
+and (min-width : 851px)
+and (max-width : 1024px) {
+
+    .intro{
+        position: relative;
+        bottom: -10%;
+        gap: 20px;
+    }
+
+    .intro__hello, .intro__summary{
+        font-size: var(--font__normal);
+    }
+
+    .intro__name{
+        font-size: 12rem;
+    }
+}
+
+@media only screen 
+and (min-width: 651px)
+and (max-width: 850px){
+
+    .hero{
+        display: block;
+        position: relative;
+        padding: 0 20px;
+        width: 100%;
+    }
+
+    .intro{
+        position: absolute;
+        bottom: 0;
+        gap: 20px;
+    }
+
+    .intro__hello, .intro__summary{
+        font-size: var(--font__normal);
+    }
+
+    .intro__name{
+        font-size: 10rem;
+        line-height: 100px;
+    }
+
+    .intro__summary{
+        width: 100%;
+    }
+
+}
+
+@media only screen 
+and (max-width: 650px){
+
+    .hero{
+        width: 90%;
+        padding: 0;
+        position: relative;
+    }
+
+    .intro{
+        position: absolute;
+        bottom: 0;
+        gap: 10px;
+    }
+
+    .intro__hello{
+        font-size: var(--font__small);
+    }
+    
+    .intro__summary{
+        font-size: 1.5rem;
+    }
+
+    .intro__name{
+        font-size: 8rem;
+        line-height: 100px;
+    }
+
+    .intro__summary{
+        width: 100%;
+    }
+
+
+}
