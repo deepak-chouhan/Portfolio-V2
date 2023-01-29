@@ -4,4 +4,4 @@ Link : https://deepakchouhan.tech/
 
 PSS: Try Reloading Multiple Times to see magic 😁
 
-!["cover"](./public/deepak_chouhan.png)
+!["cover"](https://deepakchouhan.netlify.app/deepak_chouhan.png)
