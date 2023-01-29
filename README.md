@@ -1,6 +1,6 @@
 # Portfolio V2
 
-Heroku removed free tier so i had to rework on my website again😣, but guess what new website is more amazing 😊
+Heroku removed free tier so i had to rework on my website again😣, but guess whhhaaat....new website is more amazing 😊
 
 Link : https://deepakchouhan.tech/
 
