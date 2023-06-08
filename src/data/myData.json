@@ -130,6 +130,20 @@
       "githubLink": "https://github.com/deepak-chouhan/CryptDiary",
       "websiteLink": "null",
       "accentColor": "#166ee0"
+    },
+    "project8": {
+      "id": "08",
+      "name": "DevSecOps - Jenkins",
+      "cover": "https://user-images.githubusercontent.com/69458937/244459836-0fe7490e-abdb-43fe-a670-14ac5957c3cb.png",
+      "summary": "This is a Jenkins and Docker Setup which allow you run each job in an isolated Docker Container which takes the CI/CD Workflow to next level. This also gives you an option to operate jobs using traditional method.",
+      "techStack": [
+        "Jenkins",
+        "Docker",
+        "AWS EC2"
+      ],
+      "githubLink": "https://github.com/deepak-chouhan/DSO-Jenkins",
+      "websiteLink": "null",
+      "accentColor": "#1697e0"
     }
   },
   "contactMe": {
