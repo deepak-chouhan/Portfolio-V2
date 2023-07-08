@@ -1,5 +1,6 @@
 import React from "react";
 import "./FloaterEmail.css";
+import FloaterVersion from "./FloaterVersion";
 
 const FloaterEmail = () => {
     const email = "mailto:thisisdeepakchouhan@gmail.com";
@@ -17,6 +18,7 @@ const FloaterEmail = () => {
                             stroke="white" stroke-width="1.5" />
                     </svg>
                 </a>
+                <FloaterVersion/>
             </div>
         </div>
     )
