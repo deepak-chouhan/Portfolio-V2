@@ -26,7 +26,7 @@ const Index = () => {
     return (
         <div>
             <GradientBlob/>
-            <FloaterMain/>
+            <FloaterMain dataFloater={data.hero}/>
             <NavBar/>
             <SectionHero dataHero={data.hero}/>
             <Content>

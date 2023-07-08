@@ -1,9 +1,9 @@
 import React from "react";
 import "./FloaterVersion.css";
 
-const FloaterVersion = () => {
+const FloaterVersion = (props) => {
     return (
-        <div className="FloaterVersion">v2.0.0</div>
+        <div className="FloaterVersion">{props.children}</div>
     )
 }
 
