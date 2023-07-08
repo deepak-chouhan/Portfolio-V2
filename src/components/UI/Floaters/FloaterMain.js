@@ -2,10 +2,10 @@ import React from "react";
 import FloaterEmail from "./FloaterEmail"
 import FloaterSocials from "./FloaterSocials"
 
-const FloaterMain = () => {
+const FloaterMain = (props) => {
     return (
         <div className="floaters">
-            <FloaterEmail/>
+            <FloaterEmail dataVersion={props.dataFloater.version}/>
             <FloaterSocials/>
         </div>
     )

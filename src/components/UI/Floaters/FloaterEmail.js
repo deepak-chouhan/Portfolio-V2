@@ -1,7 +1,8 @@
 import React from "react";
 import "./FloaterEmail.css";
+import FloaterVersion from "./FloaterVersion";
 
-const FloaterEmail = () => {
+const FloaterEmail = (props) => {
     const email = "mailto:thisisdeepakchouhan@gmail.com";
     return (
         <div className="FloaterEmail">
@@ -17,6 +18,7 @@ const FloaterEmail = () => {
                             stroke="white" stroke-width="1.5" />
                     </svg>
                 </a>
+                <FloaterVersion>{props.dataVersion}</FloaterVersion>
             </div>
         </div>
     )

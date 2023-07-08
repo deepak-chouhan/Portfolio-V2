@@ -29,7 +29,7 @@ const Archive = (props) => {
     return (
         <div>
             <NavBar/>
-            <FloaterMain/>
+            <FloaterMain dataFloater={data.hero}/>
             <GradientBlob/>
             <Content>
                 <div className="Header">

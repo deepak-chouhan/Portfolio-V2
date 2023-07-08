@@ -1,0 +1,6 @@
+.FloaterVersion{
+    position: fixed;
+    bottom: 5px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.2rem;
+}

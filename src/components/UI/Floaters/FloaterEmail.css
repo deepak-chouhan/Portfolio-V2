@@ -1,28 +1,24 @@
 .email__desk{
-    display: block;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+    border-right: 1px solid;
 }
 
 .icon__email{
     background-color: var(--dark);
-    position: fixed;
     top: 0;
     display: flex;
     justify-content: center;
-    padding: 18px 15px;
-}
-
-.icon__email::after{
-    content: "";
-    display: block;
-    position: absolute;
-    right: 0;
-    width: 1px;
-    background-color: var(--dark);
-    height: 150vh;
+    padding: 17px 15px;
 }
 
 .icon__email svg{
-    width: 33px;
+    width: 30px;
     height: auto;
 }
 
