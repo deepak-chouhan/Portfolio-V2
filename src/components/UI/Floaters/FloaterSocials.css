@@ -2,7 +2,7 @@
     --bottom: 210px;
     position: fixed;
     bottom: var(--bottom);
-    right: 49px;
+    right: 45px;
 }
 
 .icon__socials::after{
