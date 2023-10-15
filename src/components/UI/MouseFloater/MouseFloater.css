@@ -1,0 +1,38 @@
+.mouseIcon {
+    display: flex;
+    position: absolute;
+    z-index: 3;
+    bottom: 20px;
+    align-items: center;
+}
+
+.mouseIcon p {
+    font-size: 1.5rem;
+}
+
+.mouseScroll {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 1.5;
+}
+
+.mouseWheel {
+    width: 50px;
+    height: auto;
+    -webkit-animation: mouseWheelScroll 2s ease infinite;
+    animation: mouseWheelScroll 2s ease infinite;
+}
+
+@keyframes mouseWheelScroll {
+    0% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+    }
+
+    50% {
+        -webkit-transform: translateY(0.2rem);
+        transform: translateY(0.2rem);
+    }
+}
