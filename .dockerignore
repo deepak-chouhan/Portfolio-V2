@@ -1,3 +1,6 @@
 .git
 node_modules
 Dockerfile
+diagram
+sonar-project.properties
+Jenkinsfile
