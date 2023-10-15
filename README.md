@@ -8,4 +8,7 @@ PSS: Try Reloading Multiple Times to see **MAGICCC** 😁
 
 !["cover"](https://deepakchouhan.netlify.app/deepak_chouhan.png)
 
-# Flow
+
+## Workflow
+
+!["Workflow](./diagram/workflow.jpg)
