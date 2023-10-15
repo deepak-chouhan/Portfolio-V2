@@ -1,0 +1,190 @@
+@Library('cicd-shared-libraries') _
+pipeline {
+    agent any
+
+    environment {
+        CONFIG='PROD'
+        PROJECT_NAME='deepak-chouhan'
+        IMAGE_NAME = "dcdeepakdc/portfolio-v2"
+        PROJECT_KEY = "deepak-chouhan_Portfolio-V2"
+        REPO_NAME = "deepak-chouhan/Portfolio-V2"
+        WEBSITE_URL="https://deepakchouhan.tech/"
+        REPORT_NAME="deepakchouhan_web"
+        EMAIL_DISTRIBUTION = credentials("EMAIL_DISTRIBUTION")
+        NETLIFY_SITE_ID = credentials("PortfolioV2-PROD")
+        NETLIFY_AUTH_TOKEN = credentials("LOCAL-Jenkins-Netlify")
+    }
+
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+    }
+
+    parameters {
+        string (
+            name: "BRANCH",
+            defaultValue: "main",
+            trim: true,
+            description: 'Specify the branch name from which you want to pull the code'
+        )
+        string (
+            name: "TAG",
+            defaultValue: "latest",
+            trim: true,
+            description: 'Specify image tag'
+        )
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                dir(env.PROJECT_NAME) {
+                    echo 'Fetching Repository'
+                    git branch: "${BRANCH}", url: 'https://github.com/deepak-chouhan/Portfolio-V2.git'
+                }
+            }
+        }
+
+        stage("Setup Vars") {
+            steps {
+                script {
+                    dir(env.PROJECT_NAME) {
+                        RELEASE_NAME = "${env.CONFIG}-${params.TAG}"
+                        FULL_IMAGE_NAME = "${env.IMAGE_NAME}:${RELEASE_NAME}"
+                        JOB_NAME=env.JOB_NAME
+                        BUILD_NUMBER=env.BUILD_NUMBER
+                        DURATION=currentBuild.durationString
+                    }
+                }
+            }
+        }
+
+        stage("Code Analysis") {
+            parallel {
+                stage("Static Analysis - SonarCloud") {
+                    agent {
+                        docker { 
+                            image 'openjdk:22-slim'
+                            reuseNode true
+                        }
+                    }
+                    steps {
+                        script {
+                            dir(env.PROJECT_NAME) {
+                                sonarcloudScan(env.PROJECT_KEY)
+                            }
+                        }
+                    }
+                }
+
+                stage("Dynamic Analysis - Zap Tool") {
+                    agent {
+                        docker { 
+                            image 'owasp/zap2docker-stable' 
+                            args '-v zap_report:/zap/wrk/:rw --name zap'
+                            reuseNode true
+                        }
+                    }
+                    steps {
+                        script {
+                            dir(env.PROJECT_NAME) {
+                                zapScan(websiteURL: env.WEBSITE_URL, reportName: env.REPORT_NAME)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        stage("Fetch Report") {
+            steps {
+                dir(env.PROJECT_NAME + '/Reports') {
+                    fetchZapReport(destination: ".", reportName: env.REPORT_NAME)
+                }
+            }
+        }
+
+        stage("Build and Push") {
+            steps {
+                script {
+                    dir(env.PROJECT_NAME) {
+                        sh "docker build -t ${FULL_IMAGE_NAME} ."
+
+                        sh """
+                        npm install
+                        npm run build
+                        """
+                    }
+                }
+            }
+        }
+
+        stage("Push Image to Docker Hub") {
+            steps {
+                dir(env.PROJECT_NAME) {
+                    dockerPush(FULL_IMAGE_NAME)
+                }
+            }
+        }
+
+        stage("Github Release") {
+            steps {
+                script {
+                    dir(env.PROJECT_NAME) {
+                        createReleaseNote(config: env.CONFIG)
+                        def releaseNote = readFile(file: "./releaseNote.txt")
+                        githubRelease(
+                            githubRepo: REPO_NAME, 
+                            releaseVersion: RELEASE_NAME,
+                            releaseBranch: params.BRANCH,
+                            releaseName: RELEASE_NAME, 
+                            releaseBody: releaseNote
+                        )
+                    }
+                }
+            }
+        }
+
+        stage("Deploy - Netlify") {
+            steps {
+                script {
+                    dir(env.PROJECT_NAME) {
+                        sh "netlify deploy --prod --site ${env.NETLIFY_SITE_ID} --auth ${env.NETLIFY_AUTH_TOKEN} --dir=build" 
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            dir(env.PROJECT_NAME + '/reports') {
+                script {
+                    def emailContent = emailSuccess(
+                        templatePath: "templates/emailTemplates/successEmail.html", 
+                        jobName: JOB_NAME, 
+                        buildNumber: BUILD_NUMBER, 
+                        currentBuildDuration: DURATION
+                    )                  
+                    emailext to: EMAIL_DISTRIBUTION,
+                    subject: "SUCCESS: ${JOB_NAME} - ${BUILD_NUMBER}",
+                    body: emailContent,
+                    attachmentsPattern: "${REPORT_NAME}.pdf"
+                }
+            }
+        }
+
+        failure {
+            script {
+                def emailContent = emailSuccess(
+                    templatePath: "templates/emailTemplates/failureEmail.html", 
+                    jobName: JOB_NAME, 
+                    buildNumber: BUILD_NUMBER, 
+                    currentBuildDuration: DURATION
+                )                  
+                emailext to: EMAIL_DISTRIBUTION,
+                subject: "FAILED: ${JOB_NAME} - ${BUILD_NUMBER}",
+                body: emailContent
+            }
+        }
+    }
+}
