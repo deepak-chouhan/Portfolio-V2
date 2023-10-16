@@ -5,11 +5,6 @@
 
 Link to Website : https://deepakchouhan.tech/
 
-Link to Website : ![Static Badge](https://img.shields.io/badge/Click-Me-blue?link=https%3A%2F%2Fdeepakchouhan.tech%2F)
-
-
-
-
 P.S. Try Reloading Multiple Times to see **MAGICCC** 😁
 
 !["cover"](https://deepakchouhan.netlify.app/deepak_chouhan.png)
