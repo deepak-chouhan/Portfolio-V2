@@ -5,7 +5,7 @@ import FloaterSocials from "./FloaterSocials"
 const FloaterMain = (props) => {
     return (
         <div className="floaters">
-            <FloaterEmail dataVersion={props.dataFloater.version}/>
+            <FloaterEmail dataVersion={props.version}/>
             <FloaterSocials/>
         </div>
     )

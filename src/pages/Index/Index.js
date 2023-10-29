@@ -11,6 +11,7 @@ import Footer from "../../components/UI/Footer/Footer";
 
 
 import data from "../../data/myData.json"
+import versionFile from "../../../package.json"
 const START_PROJECT = 0;
 const TOTAL_PROJECTS = 3;
 
@@ -26,7 +27,7 @@ const Index = () => {
     return (
         <div>
             <GradientBlob/>
-            <FloaterMain dataFloater={data.hero}/>
+            <FloaterMain dataFloater={data.hero} version={versionFile.version}/>
             <NavBar/>
             <SectionHero dataHero={data.hero}/>
             <Content>
