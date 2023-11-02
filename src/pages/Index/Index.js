@@ -12,6 +12,7 @@ import Footer from "../../components/UI/Footer/Footer";
 
 import data from "../../data/myData.json"
 import versionFile from "../../../package.json"
+import SectionExperience from "../../components/SectionExperience/SectionExperience";
 const START_PROJECT = 0;
 const TOTAL_PROJECTS = 3;
 
@@ -32,6 +33,7 @@ const Index = () => {
             <SectionHero dataHero={data.hero}/>
             <Content>
                 <SectionAboutMe aboutMe={data.aboutMe}/>
+                <SectionExperience experiences={data.experiences}></SectionExperience>
                 <SectionProject topProjects={topProjects}/>
                 <SectionContactMe contactData={data.contactMe}/>
             </Content>

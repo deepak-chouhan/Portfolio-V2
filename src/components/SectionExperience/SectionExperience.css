@@ -1,0 +1,12 @@
+.experience {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.experience .detail {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+

@@ -27,6 +27,46 @@
       "CI/CD"
     ]
   },
+  "experiences": [
+    {
+      "company": "Whirlpool Corporation",
+      "company_link": "https://www.whirlpool.com",
+      "summary": "As a Software Engineer Trainee at Whirlpool Solutions, I lead the transition to DevSecOps, specializing in CI/CD pipeline management. Through collaborative efforts, I refine DevOps processes for optimal efficiency. Committed to excellence, I design and maintain efficient pipelines, informed by ongoing research into emerging DevSecOps trends.",
+      "skills": [
+        "Jenkins",
+        "AWS",
+        "SonarQube"
+      ],
+      "roles": [
+        {
+          "name": "Software Engineer Trainee",
+          "from": "Jan 2023",
+          "to": "Present"
+        },
+        {
+          "name": "Software Engineer Intern",
+          "from": "Aug 2023",
+          "to": "Aug 2023"
+        }
+      ]
+    },
+    {
+      "company": "GDSC MIT ADTU",
+      "company_link": "https://www.linkedin.com/company/gdsc-mitadt",
+      "summary": "Developed a dynamic blog website featuring an integrated editor, empowering users to effortlessly publish their content. Collaborating seamlessly with team members, I contribute to project development and event management. Versatility is a key aspect of my role, as I work across a spectrum of technologies to bring diverse projects to fruition.",
+      "skills": [
+        "Web Development",
+        "Leadership"
+      ],
+      "roles": [
+        {
+          "name": "Technical Team Member",
+          "from": "Jan 2023",
+          "to": "Aug 2023"
+        }
+      ]
+    }
+  ],
   "projects": {
     "project1": {
       "id": "01",

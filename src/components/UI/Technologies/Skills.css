@@ -1,0 +1,28 @@
+.skills{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skills ul, .project__tech{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills ul li, .project__tech li{
+    font-family: 'Roboto Mono', monospace;
+    display: inline-block;
+    color: var(--blue);
+}
+
+.skills ul li::after, .project__tech li::after{
+    content: "\2022";
+    font-size: var(--font__small);
+    position: relative;
+    right: -10px;
+}
+
+.skills ul li:last-of-type::after, .project__tech li:last-of-type::after{
+    content: "";
+}

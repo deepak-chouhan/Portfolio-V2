@@ -1,0 +1,43 @@
+.company {
+    display: flex;
+    justify-content: flex-start;
+    gap: 150px;
+    padding: 10px;
+}
+
+.company__name {
+    width: 150px;
+    white-space: nowrap;
+}
+
+.company__experience{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.company__role {
+    display: flex;
+    gap: 20px;
+    padding: 1px 0;
+}
+
+.company__role:first-of-type{
+    font-weight: 500;
+}
+
+.company__role:not(:first-of-type){
+    font-size: var(--font__small);
+    color: var(--grey);
+}
+
+.company__summary {
+    font-size: var(--font__small);
+    width: 600px;
+    word-spacing: 1px;
+    color: var(--grey);
+}
+
+.company .skills {
+    font-size: var(--font__xsmall);   
+}
