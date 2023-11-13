@@ -6,8 +6,13 @@
 }
 
 .company__name {
-    width: 150px;
+    /* width: 150px; */
+    height: 100%;
     white-space: nowrap;
+}
+
+.company__name:hover {
+    color: var(--dark_blue);
 }
 
 .company__experience{

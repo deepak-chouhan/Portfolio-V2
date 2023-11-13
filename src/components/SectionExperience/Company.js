@@ -5,7 +5,7 @@ import Skills from "../UI/Technologies/Skills";
 const Company = (props) => {
     return (
         <div className="company">
-            <div className="company__name">{props.experience.company}</div>
+            <a className="company__name btn__underline" href={props.experience.company_link} target="opener">{props.experience.company}</a>
             <div className="company__experience">
                 <div className="company__roles">
                     {props.experience.roles.map(role => 
