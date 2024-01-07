@@ -49,6 +49,7 @@ body {
     font-size: var(--font__normal);
     line-height: 1.5;
     overflow: overlay;
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar{
