@@ -1,12 +1,12 @@
 .company {
-    display: flex;
-    justify-content: flex-start;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
     gap: 150px;
-    padding: 10px;
 }
 
 .company__name {
-    /* width: 150px; */
+    width: 150px;
     height: 100%;
     white-space: nowrap;
 }
@@ -36,6 +36,10 @@
     color: var(--grey);
 }
 
+.company__role__duration__start, .company__role__duration__end{
+    display: inline-block;
+}
+
 .company__summary {
     font-size: var(--font__small);
     width: 600px;
@@ -45,4 +49,64 @@
 
 .company .skills {
     font-size: var(--font__xsmall);   
+}
+
+@media only screen
+and (min-width : 100px)
+and (max-width : 1024px) {
+    .company {
+        grid-auto-flow: row;
+        gap: 10px;
+    }
+
+    .company__name {
+        font-size: var(--font__normal);
+        font-weight: 500;
+    }
+
+    .company__role{
+        font-size: var(--font__small) !important;
+        font-weight: 400 !important;
+        color: var(--grey);
+        font-style: italic;
+    }
+
+    .company__summary {
+        width: auto;
+    }
+}
+
+@media only screen
+and (min-width : 851px)
+and (max-width : 1024px) {
+
+    body{
+        font-size: var(--font__small);
+    }
+}
+
+@media only screen 
+and (max-width: 650px){
+
+    .company__role__duration__end{
+        display: none;
+    }
+}
+
+@media only screen
+and (max-width:315px){
+    .company__role {
+        gap: 10px;
+    }
+    .company__role__duration:first-of-type {
+        display: block;
+    }
+
+    .company__role__duration:not(:first-of-type){
+        display: none;
+    }
+
+    .company__summary {
+        width: auto;
+    }
 }
