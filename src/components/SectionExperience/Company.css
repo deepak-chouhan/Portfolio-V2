@@ -23,6 +23,7 @@
 
 .company__role {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     padding: 1px 0;
 }
@@ -38,6 +39,10 @@
 
 .company__role__duration__start, .company__role__duration__end{
     display: inline-block;
+}
+
+.company__role__duration__dash{
+    display: none;
 }
 
 .company__summary {
@@ -86,17 +91,26 @@ and (max-width : 1024px) {
 }
 
 @media only screen 
+and (min-width: 315px)
 and (max-width: 650px){
+
+    .company__role{
+        gap: 5px;
+    }
 
     .company__role__duration__end{
         display: none;
+    }
+
+    .company__role__duration__dash{
+        display: block;
     }
 }
 
 @media only screen
 and (max-width:315px){
     .company__role {
-        gap: 10px;
+        gap: 2px;
     }
     .company__role__duration:first-of-type {
         display: block;

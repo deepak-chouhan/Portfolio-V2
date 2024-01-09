@@ -34,8 +34,6 @@
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
-    /* TODO: Fix the overflow x occuring due to gradient blob */
-    /* overflow-x: hidden; */
 }
 
 html::-webkit-scrollbar {

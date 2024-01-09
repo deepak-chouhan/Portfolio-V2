@@ -11,11 +11,12 @@ const Company = (props) => {
                     {props.experience.roles.map(role => 
                         <div className="company__role">
                             <div className="company__role__name">{role.name}</div>
+                            <div className="company__role__duration__dash">-</div>
                             <div className="company__role__duration">
                                 <div className="company__role__duration__start">{role.from}</div>
-                                <div className="company__role__duration__end"> — {role.to}</div>
+                                <div className="company__role__duration__end">&nbsp;— {role.to}</div>
                                 {/* {role.from} — {role.to} */}
-                            </div>
+                            </div> 
                         </div>
                     )}
                 </div>
