@@ -15,7 +15,6 @@ const Company = (props) => {
                             <div className="company__role__duration">
                                 <div className="company__role__duration__start">{role.from}</div>
                                 <div className="company__role__duration__end">&nbsp;— {role.to}</div>
-                                {/* {role.from} — {role.to} */}
                             </div> 
                         </div>
                     )}
