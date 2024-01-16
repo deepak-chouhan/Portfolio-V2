@@ -14,7 +14,7 @@ const SectionProject = (props) => {
 
     return (
         <div class="top_projects">
-            <h1 class="heading">02. Projects I've Built</h1>
+            <h1 class="heading">03. Projects I've Built</h1>
             <div class="projects">
                 {projectCard}
             </div>

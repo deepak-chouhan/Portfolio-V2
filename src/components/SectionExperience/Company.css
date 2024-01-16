@@ -1,0 +1,126 @@
+.company {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 150px;
+}
+
+.company__name {
+    width: 150px;
+    height: 100%;
+    white-space: nowrap;
+}
+
+.company__name:hover {
+    color: var(--dark_blue);
+}
+
+.company__experience{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.company__role {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 1px 0;
+}
+
+.company__role:first-of-type{
+    font-weight: 500;
+}
+
+.company__role:not(:first-of-type){
+    font-size: var(--font__small);
+    color: var(--grey);
+}
+
+.company__role__duration__start, .company__role__duration__end{
+    display: inline-block;
+}
+
+.company__role__duration__dash{
+    display: none;
+}
+
+.company__summary {
+    font-size: var(--font__small);
+    width: 600px;
+    word-spacing: 1px;
+    color: var(--grey);
+}
+
+.company .skills {
+    font-size: var(--font__xsmall);   
+}
+
+@media only screen
+and (min-width : 100px)
+and (max-width : 1024px) {
+    .company {
+        grid-auto-flow: row;
+        gap: 10px;
+    }
+
+    .company__name {
+        font-size: var(--font__normal);
+        font-weight: 500;
+    }
+
+    .company__role{
+        font-size: var(--font__small) !important;
+        font-weight: 400 !important;
+        color: var(--grey);
+        font-style: italic;
+    }
+
+    .company__summary {
+        width: auto;
+    }
+}
+
+@media only screen
+and (min-width : 851px)
+and (max-width : 1024px) {
+
+    body{
+        font-size: var(--font__small);
+    }
+}
+
+@media only screen 
+and (min-width: 315px)
+and (max-width: 650px){
+
+    .company__role{
+        gap: 5px;
+    }
+
+    .company__role__duration__end{
+        display: none;
+    }
+
+    .company__role__duration__dash{
+        display: block;
+    }
+}
+
+@media only screen
+and (max-width:315px){
+    .company__role {
+        gap: 2px;
+    }
+    .company__role__duration:first-of-type {
+        display: block;
+    }
+
+    .company__role__duration:not(:first-of-type){
+        display: none;
+    }
+
+    .company__summary {
+        width: auto;
+    }
+}

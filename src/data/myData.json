@@ -27,11 +27,52 @@
       "CI/CD"
     ]
   },
+  "experiences": [
+    {
+      "company": "Whirlpool Corporation",
+      "company_link": "https://www.whirlpool.com",
+      "summary": "As a Software Engineer Trainee at Whirlpool Solutions, I lead the transition to DevSecOps, specializing in CI/CD pipeline management. Through collaborative efforts, I refine DevOps processes for optimal efficiency. Committed to excellence, I design and maintain efficient pipelines, informed by ongoing research into emerging DevSecOps trends.",
+      "skills": [
+        "Jenkins",
+        "AWS",
+        "SonarQube"
+      ],
+      "roles": [
+        {
+          "name": "Software Engineer Trainee",
+          "from": "Jan 2023",
+          "to": "Present"
+        },
+        {
+          "name": "Software Engineer Intern",
+          "from": "Aug 2023",
+          "to": "Aug 2023"
+        }
+      ]
+    },
+    {
+      "company": "GDSC MIT ADTU",
+      "company_link": "https://www.linkedin.com/company/gdsc-mitadt",
+      "summary": "Developed a dynamic blog website featuring an integrated editor, empowering users to effortlessly publish their content. Collaborating seamlessly with team members, I contribute to project development and event management. Versatility is a key aspect of my role, as I work across a spectrum of technologies to bring diverse projects to fruition.",
+      "skills": [
+        "Web Development",
+        "Leadership"
+      ],
+      "roles": [
+        {
+          "name": "Technical Team Member",
+          "from": "Jan 2023",
+          "to": "Aug 2023"
+        }
+      ]
+    }
+  ],
   "projects": {
     "project1": {
       "id": "01",
       "name": "AI Buddy",
-      "cover": "https://drive.google.com/uc?id=1g1Fi3aluKmApuHW2wyAM9Zu0rQ-tA4_i",
+      "cover": "/ai_buddy.jpg",
+      "cover2": "https://drive.google.com/uc?id=1g1Fi3aluKmApuHW2wyAM9Zu0rQ-tA4_i",
       "summary": "This project helps users improve their communication skills through practice with a machine learning model and access to study material. The goal is to help users become more confident and effective communicators in various situations.",
       "techStack": [
         "Node.JS",
@@ -47,7 +88,8 @@
     "project2": {
       "id": "02",
       "name": "Speaker Identification System",
-      "cover": "https://drive.google.com/uc?id=1pCjYI1NkFTOAYCnhfZVAPkXoVfIMCN8u",
+      "cover": "/attendance.jpg",
+      "cover2": "https://drive.google.com/uc?id=1pCjYI1NkFTOAYCnhfZVAPkXoVfIMCN8u",
       "summary": "This application aims to reduce the time required for manual attendance and prevent fake attendance. It allows teachers to schedule attendance using students' voices and download and update attendance records.",
       "techStack": [
         "Django",
@@ -62,7 +104,8 @@
     "project3": {
       "id": "03",
       "name": "Shopify Scrapper",
-      "cover": "https://drive.google.com/uc?id=14gAuKqpDaRJHKIEHPQ4BZPrBpMwNfRGh",
+      "cover": "/shopify-img.jpg",
+      "cover2": "https://drive.google.com/uc?id=14gAuKqpDaRJHKIEHPQ4BZPrBpMwNfRGh",
       "summary": "The purpose of this scraper is to extract data from Shopify stores and save it to a database. It has the ability to scrape multiple stores simultaneously, making it a versatile and efficient tool.",
       "techStack": [
         "Django",
