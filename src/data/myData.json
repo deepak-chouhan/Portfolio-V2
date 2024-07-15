@@ -15,14 +15,13 @@
     "skills": [
       "Python",
       "JavaScript",
-      "Heroku",
       "Node.JS",
       "Express.JS",
       "Django",
       "MongoDB",
       "SQL",
-      "Machine Learning",
       "Jenkins",
+      "SonarQube", 
       "Docker",
       "CI/CD"
     ]
@@ -67,10 +66,11 @@
       ]
     }
   ],
-  "projects": {
-    "project1": {
+  "projects": [
+    {
       "id": "01",
       "name": "AI Buddy",
+      "topProject": true,
       "cover": "/ai_buddy.jpg",
       "cover2": "https://drive.google.com/uc?id=1g1Fi3aluKmApuHW2wyAM9Zu0rQ-tA4_i",
       "summary": "This project helps users improve their communication skills through practice with a machine learning model and access to study material. The goal is to help users become more confident and effective communicators in various situations.",
@@ -85,9 +85,10 @@
       "websiteLink": "null",
       "accentColor": "#005aff"
     },
-    "project2": {
+    {
       "id": "02",
       "name": "Speaker Identification System",
+      "topProject": true,
       "cover": "/attendance.jpg",
       "cover2": "https://drive.google.com/uc?id=1pCjYI1NkFTOAYCnhfZVAPkXoVfIMCN8u",
       "summary": "This application aims to reduce the time required for manual attendance and prevent fake attendance. It allows teachers to schedule attendance using students' voices and download and update attendance records.",
@@ -101,7 +102,7 @@
       "websiteLink": "null",
       "accentColor": "#0e44bd"
     },
-    "project3": {
+    {
       "id": "03",
       "name": "Shopify Scrapper",
       "cover": "/shopify-img.jpg",
@@ -116,7 +117,7 @@
       "websiteLink": "null",
       "accentColor": "#07a217"
     },
-    "project4": {
+    {
       "id": "04",
       "name": "Dominant Color",
       "cover": "https://raw.githubusercontent.com/deepak-chouhan/Dominant-Color-In-Image/main/readme_images/Results.png",
@@ -130,7 +131,7 @@
       "websiteLink": "null",
       "accentColor": "#42f1ff"
     },
-    "project5": {
+    {
       "id": "05",
       "name": "Optical Character Recognition",
       "cover": "https://raw.githubusercontent.com/deepak-chouhan/optical-character-recognition/Main/result.png",
@@ -143,7 +144,7 @@
       "websiteLink": "null",
       "accentColor": "#004a99"
     },
-    "project6": {
+    {
       "id": "06",
       "name": "Speech Emotion Classifier",
       "cover": "https://miro.medium.com/max/875/0*tqQ-x7QM2zKhJB9F.jpg",
@@ -159,7 +160,7 @@
       "websiteLink": "null",
       "accentColor": "#23d78c"
     },
-    "project7": {
+    {
       "id": "07",
       "name": "CryptDiary",
       "cover": "https://raw.githubusercontent.com/deepak-chouhan/CryptDiary/main/CryptDiary.png",
@@ -175,7 +176,7 @@
       "websiteLink": "null",
       "accentColor": "#166ee0"
     },
-    "project8": {
+    {
       "id": "08",
       "name": "DevSecOps - Jenkins",
       "cover": "https://user-images.githubusercontent.com/69458937/244459836-0fe7490e-abdb-43fe-a670-14ac5957c3cb.png",
@@ -188,8 +189,26 @@
       "githubLink": "https://github.com/deepak-chouhan/DSO-Jenkins",
       "websiteLink": "null",
       "accentColor": "#1697e0"
+    },
+    {
+      "id": "09",
+      "name": "GenAI Pull Request Reviewer",
+      "topProject": true,
+      "cover": "/gen-ai-pr-reviewer.jpg",
+      "cover2": "https://raw.githubusercontent.com/deepak-chouhan/genai-pr-reviewer/main/public/repo-card.jpg",
+      "summary": "This is Cody a self-hosted pull request reviewer that analyze your code and suggest Improvement. It helps you maintain high code quality and improve you development workflow.",
+      "techStack": [
+        "JavaScript",
+        "Node.JS",
+        "Github App",
+        "Gemini",
+        "ChatGPT"
+      ],
+      "githubLink": "https://github.com/deepak-chouhan/genai-pr-reviewer",
+      "websiteLink": "null",
+      "accentColor": "#005aff"
     }
-  },
+  ],
   "contactMe": {
     "title": "Get in touch",
     "mssg": "If you have a exciting opportunity for me or if you just wanna say hello. Please feel free to Email me😊"

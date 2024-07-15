@@ -7,7 +7,7 @@ const ArchiveProject = (props)=>{
 
     return (
         <tr className="ArchiveProject">
-            <td>{props.projectData.id}</td>
+            <td>0{props.srNo}</td>
             <td className="project_title">{props.projectData.name}</td>
             <td className="archive__tech">
                 <ul style={{color: props.projectData.accentColor}} class="project__tech">{props.projectData.techStack.map(skill => <li>{skill}</li>)}</ul>

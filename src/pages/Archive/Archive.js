@@ -21,9 +21,10 @@ const Archive = (props) => {
     console.log(projects)
 
     const archive= [];
+    const projectLength = projects.length-1;
 
-    for(let i=0; i<projects.length; i++){
-        archive.push(<ArchiveProject srNo={i} projectData={projects[i]}/>)
+    for(let i=0; i<projectLength; i++){
+        archive.push(<ArchiveProject srNo={i} projectData={projects[projectLength-i]}/>)
     }
 
     return (
