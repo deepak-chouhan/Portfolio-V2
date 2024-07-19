@@ -8,7 +8,7 @@ const SectionProject = (props) => {
     const TOTAL_PROJECTS = props.topProjects.length;
     const projectCard = [];
 
-    for(let i=0; i<props.topProjects.length; i++){
+    for(let i=props.topProjects.length - 1; i>=0; i--){
         projectCard.push(<TopProjectCard key={i} projectData={props.topProjects[i]} srNO={i} totalProjects={TOTAL_PROJECTS}/>)
     }
 
