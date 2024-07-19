@@ -1,6 +1,7 @@
 import React from "react";
 import TopProjectCard from "../ProjectCards/TopProjectCard";
 import "./SectionProject.css";
+import { Link } from "react-router-dom";
 
 
 const SectionProject = (props) => {
@@ -13,13 +14,13 @@ const SectionProject = (props) => {
     }
 
     return (
-        <div class="top_projects">
-            <h1 class="heading">03. Projects I've Built</h1>
-            <div class="projects">
+        <div className="top_projects">
+            <h1 className="heading">03. Projects I've Built</h1>
+            <div className="projects">
                 {projectCard}
             </div>
-            <div class="archive">
-                <a href="/archive">view archive</a>
+            <div className="archive">
+                <Link to="/archive">view archive</Link>
             </div>
         </div>
     )
