@@ -31,7 +31,7 @@
             "company": "Whirlpool Corporation",
             "company_link": "https://www.whirlpool.com",
             "summary": "As a Software Engineer Trainee at Whirlpool Corporation, I developed a GenAI Proof of Concept (PoC) designed to boost code quality, security, and logic, while streamlining developer workflows. Contributed to implementing CI/CD pipelines for enhanced deployment efficiency and automation. Collaborated closely with teams to refine DevOps processes and tools continuously.",
-            "skills": ["Jenkins", "AWS", "SonarQube"],
+            "skills": ["Jenkins", "AWS", "SonarQube", "Python"],
             "roles": [
                 {
                     "name": "Software Engineer Trainee",
