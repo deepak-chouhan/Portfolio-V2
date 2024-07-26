@@ -23,6 +23,7 @@
     width: 100px;
     height: 300px;
     filter: blur(60px);
+    background: inherit;
 }
 
 .project:nth-of-type(1) .cover::after{
@@ -32,7 +33,7 @@
     background: var(--accentSecond);
 }
 .project:nth-of-type(3) .cover::after{
-    background: var(--accentThird);
+    background: var(--accentFirst);
 }
 
 .project .cover img{
@@ -97,7 +98,7 @@
     color: var(--accentSecond);
 }
 .project:nth-of-type(3) .project__tech li{
-    color: var(--accentThird);
+    color: var(--accentFirst);
 }
 
 .project__link{

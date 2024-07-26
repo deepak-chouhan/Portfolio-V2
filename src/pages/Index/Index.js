@@ -13,18 +13,9 @@ import Footer from "../../components/UI/Footer/Footer";
 import data from "../../data/myData.json"
 import versionFile from "../../../package.json"
 import SectionExperience from "../../components/SectionExperience/SectionExperience";
-const START_PROJECT = 0;
-const TOTAL_PROJECTS = 3;
 
 const Index = () => {
-
-    const projectHandler = (projects) => {
-        projects = Object.entries(projects);
-        return projects.map(project => project[1])
-    }
-
-    const topProjects = projectHandler(data.projects).slice(START_PROJECT, TOTAL_PROJECTS)
-
+    const topProjects = data.projects.filter((project) => project.topProject)
     return (
         <div>
             <GradientBlob/>
