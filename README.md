@@ -13,4 +13,3 @@ P.S. Try Reloading Multiple Times to see **MAGICCC** 😁
 ## CI-CD Workflow
 
 !["Workflow](./diagram/workflow.jpg)
-
